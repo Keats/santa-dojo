@@ -10,5 +10,6 @@ with open("tiger/tiger.json") as f:
             continue
         actual_gifts.append(gift)
 
-    for g in actual_gifts:
-        print("%s - %s - %s" %(g["name"], g["pic"], g["price"]))
+    with open("cleaned_tigers.json", "w") as f:
+        f.write(json.dumps(actual_gifts))
+
